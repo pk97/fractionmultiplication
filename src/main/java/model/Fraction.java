@@ -9,8 +9,23 @@ public class Fraction {
     public Fraction(int numerator, int denominator) {
         if (denominator == 0)
             throw new IllegalArgumentException("denominator can not be zero");
+
         this.numerator = numerator;
         this.denominator = denominator;
+
+        transformFraction();
+    }
+
+    private  void transformFraction() {
+        if (this.numerator < 0 && this.denominator < 0)
+        {
+            this.numerator = Math.abs(this.numerator);
+            this.denominator = Math.abs(this.denominator);
+        }
+        if (this.denominator < 0 && this.numerator > 0) {
+            this.numerator = this.numerator*-1;
+            this.denominator = Math.abs(this.denominator);
+        }
     }
 
     @Override
@@ -19,6 +34,15 @@ public class Fraction {
         if (o == null || getClass() != o.getClass()) return false;
         Fraction fraction = (Fraction) o;
         return numerator == fraction.numerator && denominator == fraction.denominator;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Fraction{" +
+                numerator +
+                "/" + denominator +
+                '}';
     }
 
     @Override
