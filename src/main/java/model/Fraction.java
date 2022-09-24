@@ -16,6 +16,10 @@ public class Fraction {
         transformFraction();
     }
 
+    /** transformFraction will simplify negative fractions.
+     * Fraction will be positive if both numerator and denominator are negative.
+     * Negative sign will move in numerator if numerator is positive and denominator negative.
+     */
     private  void transformFraction() {
         if (this.numerator < 0 && this.denominator < 0)
         {

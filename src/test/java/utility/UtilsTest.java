@@ -45,7 +45,6 @@ class UtilsTest {
         assertEquals(5, gcd);
     }
 
-
     @Test
     void GCDShouldReturnPositiveWhenNumbersAreNegative() {
         int gcd = Utils.gcd(-24, -30);

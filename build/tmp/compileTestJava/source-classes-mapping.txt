@@ -1,6 +1,0 @@
-utility/UtilsTest.java
- utility.UtilsTest
-model/FractionTest.java
- model.FractionTest
-service/MultiplicationTest.java
- service.MultiplicationTest
